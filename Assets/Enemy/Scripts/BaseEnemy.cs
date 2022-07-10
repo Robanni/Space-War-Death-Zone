@@ -8,6 +8,8 @@ public class BaseEnemy : MonoBehaviour
     protected int health = 1;
     [SerializeField]
     protected int expiriens = 1;
+    [SerializeField]
+    protected int damage = 1;
 
     // Update is called once per frame
     void Update()
@@ -15,21 +17,27 @@ public class BaseEnemy : MonoBehaviour
         if(!isAlive())
         {
             Destroy(gameObject);
+            FindObjectOfType<MainPlayer>().exp += expiriens;
+        }
+        
+        if(transform.position.y < -7f)//”ничтожает объект если он ниже карты
+        {
+            Destroy(gameObject);
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "PlayerBullet")
         {
-            int damage = collision.gameObject.GetComponent<PlayerBullet>().damege;
+            int damage = collision.gameObject.GetComponent<PlayerBullet>().damege;//коллизи€ урона
             takeDamege(damage);
         }
     }
 
     bool isAlive()
         { return health > 0; }
-    void takeDamege(int damage)
+    void takeDamege(int damage)//получение урона
     {
         health -= damage;
     }
