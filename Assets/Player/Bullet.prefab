@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 4714966743281110682}
   - component: {fileID: 461408071945786355}
   - component: {fileID: 6224359965534315489}
-  - component: {fileID: 9099745316707077907}
+  - component: {fileID: 6777762354448681096}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.01
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.74, y: 1.3}
   m_EdgeRadius: 0
---- !u!114 &9099745316707077907
+--- !u!114 &6777762354448681096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,6 +143,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6174499515117571086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b109f4c506b4024d87dacbd75223e13, type: 3}
+  m_Script: {fileID: 11500000, guid: e1ec8d26a50299d40a48c2872db5f925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
