@@ -226,6 +226,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp: 0
+  health: 3
+--- !u!61 &543225782
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543225772}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12, y: 12}
+    newSize: {x: 12, y: 12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8, y: 5.53}
+  m_EdgeRadius: 0
 --- !u!1 &1081471816
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,14 +468,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039394916}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 5.46, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0.05, y: 5.02, z: 0}
   m_LocalScale: {x: 0.73, y: 0.73, z: 0.73}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &2039394918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,8 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefub: {fileID: 7289229481557758752, guid: 1d561e614b74c634eae1f3e9f11bb211, type: 3}
-  intervalSpawn: 200
-  point: {fileID: 2039394917}
+  intervalSpawn: 5
 --- !u!1001 &2033890763672159649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -473,6 +499,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2033890763431686641, guid: 2efc6ede7f641d6449ab24c4fa030ffa, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033890763431686641, guid: 2efc6ede7f641d6449ab24c4fa030ffa, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2033890763431686643, guid: 2efc6ede7f641d6449ab24c4fa030ffa, type: 3}

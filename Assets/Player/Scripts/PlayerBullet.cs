@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     [SerializeField]
-    public int damege = 1;
+    public int damage = 1;
     void Update()
     {
         if (transform.position.y > 10)
@@ -15,6 +15,6 @@ public class PlayerBullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        if(collision.gameObject.tag == "Enemy")Destroy(gameObject);
     }
 }

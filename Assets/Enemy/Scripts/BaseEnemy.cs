@@ -30,7 +30,7 @@ public class BaseEnemy : MonoBehaviour
     {
         if(collision.gameObject.tag == "PlayerBullet")
         {
-            int damage = collision.gameObject.GetComponent<PlayerBullet>().damege;//коллизия урона
+            int damage = collision.gameObject.GetComponent<PlayerBullet>().damage;//коллизия урона
             takeDamege(damage);
         }
     }
