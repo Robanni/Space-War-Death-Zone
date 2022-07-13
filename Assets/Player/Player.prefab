@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2033890763431686640}
   - component: {fileID: 2033890763431686642}
   - component: {fileID: 2033890763431686645}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2033890764339657872}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
