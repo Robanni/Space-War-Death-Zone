@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SimpleEnemy : BaseEnemy
 {
-    private float maxX = 1.77f;
+    private float maxX;
 
     private float posY;
     private float posX;
@@ -19,6 +19,10 @@ public class SimpleEnemy : BaseEnemy
     // Start is called before the first frame update
     void Start()
     {
+        Camera cam = Camera.main;
+
+        maxX = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x;
+
         posY = transform.position.y;
         posX = transform.position.x;
         StartCoroutine(shooting());
