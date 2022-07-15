@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject enemyPrefub;
     public float intervalSpawn;
+    [SerializeField]
+    public List<GameObject> enemyPrefubArr;
 
     private float width;
     private float height;
@@ -24,13 +24,13 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator Spawner()    {
         while (true)
         {
-            float posX =  Random.Range(0, width);
+            float posX =  Random.Range(0, width);//рандомная позиция Х врага через размер экрана
+            int typeOfEnemy = Random.Range(0, enemyPrefubArr.Count);
 
-            Vector3 pos = cam.ScreenToWorldPoint( new Vector3(posX,height,0));
-
+            Vector3 pos = cam.ScreenToWorldPoint( new Vector3(posX,height,0));//вектор с рандомным Х и У у верха экрана
             pos.z = 0;
 
-            Instantiate(enemyPrefub, pos, transform.rotation);
+            Instantiate(enemyPrefubArr[typeOfEnemy] , pos, enemyPrefubArr[typeOfEnemy].transform.rotation);
 
             yield return new WaitForSecondsRealtime(intervalSpawn);
         }
