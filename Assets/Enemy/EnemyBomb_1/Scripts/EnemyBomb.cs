@@ -19,6 +19,11 @@ public class EnemyBomb : MonoBehaviour
     {
         pos.y -= speed* Time.deltaTime;
         transform.position = pos;
+
+        if (transform.position.y < -6.5f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
