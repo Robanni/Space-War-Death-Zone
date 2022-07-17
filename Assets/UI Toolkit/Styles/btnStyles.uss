@@ -1,0 +1,21 @@
+.btnStyles {
+    font-size: 24px;
+    background-color: rgba(250, 246, 246, 255);
+    color: rgba(2, 2, 2, 255);
+    margin-bottom: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    max-width: 200px;
+    min-width: 150px;
+    width: 100%;
+    transition-duration: 0.5s;
+}
+
+.btnStyles:hover {
+    color: rgba(0, 0, 0, 255);
+    background-color: rgba(255, 255, 255, 255);
+    max-width: none;
+    width: 101%;
+}

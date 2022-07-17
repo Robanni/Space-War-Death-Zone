@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/btnStyles.uss?fileID=7433441132597879392&amp;guid=51babe257444b1a47a65643cdf416d6e&amp;type=3#btnStyles" />
+    <ui:VisualElement name="MainWin" style="height: 100%; width: 100%; justify-content: center; min-width: 50%;">
+        <ui:VisualElement name="container" style="padding-left: 50px; padding-right: 50px; padding-top: 20px; padding-bottom: 20px; flex-grow: 0; flex-direction: column; flex-wrap: nowrap; align-items: flex-start; justify-content: flex-start; top: auto; width: 100%;">
+            <ui:Label text="Space War" display-tooltip-when-elided="true" name="Title" style="font-size: 36px; -unity-text-align: upper-left; margin-bottom: 20px; width: 100%; flex-shrink: 0; display: flex; overflow: visible; align-items: stretch; white-space: nowrap; color: rgb(255, 255, 255);" />
+            <ui:VisualElement name="Buttons" style="width: 70%;">
+                <ui:Button text="Start" display-tooltip-when-elided="true" name="start-button" class="btnStyles" />
+                <ui:Button text="Options" display-tooltip-when-elided="true" name="Options" class="btnStyles" style="font-size: 24px; margin-bottom: 10px;" />
+                <ui:Button text="Exit" display-tooltip-when-elided="true" name="Exit" class="btnStyles" style="font-size: 24px; margin-bottom: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
