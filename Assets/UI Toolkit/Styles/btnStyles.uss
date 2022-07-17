@@ -1,7 +1,7 @@
 .btnStyles {
     font-size: 24px;
-    background-color: rgba(250, 246, 246, 255);
-    color: rgba(2, 2, 2, 255);
+    background-color: rgb(250, 246, 246);
+    color: rgb(2, 2, 2);
     margin-bottom: 10px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -14,8 +14,13 @@
 }
 
 .btnStyles:hover {
-    color: rgba(0, 0, 0, 255);
-    background-color: rgba(255, 255, 255, 255);
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     max-width: none;
     width: 101%;
+}
+
+.hide {
+    display: none;
+    visibility: visible;
 }

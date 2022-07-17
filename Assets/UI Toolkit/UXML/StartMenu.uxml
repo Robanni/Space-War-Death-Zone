@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/btnStyles.uss?fileID=7433441132597879392&amp;guid=51babe257444b1a47a65643cdf416d6e&amp;type=3#btnStyles" />
+    <ui:VisualElement name="MainWin" style="flex-grow: 1;">
+        <ui:VisualElement name="container" style="padding-left: 50px; padding-right: 50px; padding-top: 20px; padding-bottom: 20px; flex-grow: 1; flex-direction: column; flex-wrap: nowrap; align-items: flex-start; justify-content: center; top: auto; width: 100%;">
+            <ui:Label text="Space War &#10;Death Zone" display-tooltip-when-elided="true" name="Title" enable-rich-text="true" style="font-size: 36px; -unity-text-align: upper-left; margin-bottom: 20px; width: 78%; flex-shrink: 0; display: flex; overflow: visible; align-items: stretch; white-space: nowrap; color: rgb(255, 255, 255); flex-direction: column; flex-wrap: nowrap; height: 107px; justify-content: flex-start;" />
+            <ui:VisualElement name="Buttons" style="width: 70%;">
+                <ui:Button text="Start" display-tooltip-when-elided="true" name="start-button" class="btnStyles" />
+                <ui:Button text="Shop" display-tooltip-when-elided="true" name="shop-button" class="btnStyles" />
+                <ui:Button text="Options" display-tooltip-when-elided="true" name="settings-button" class="btnStyles" style="font-size: 24px; margin-bottom: 10px;" />
+                <ui:Button text="Exit" display-tooltip-when-elided="true" name="exit-button" class="btnStyles" style="font-size: 24px; margin-bottom: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="ShopWin" class="hide" style="flex-grow: 1;">
+        <ui:VisualElement name="container" style="padding-left: 50px; padding-right: 50px; padding-top: 20px; padding-bottom: 20px; flex-grow: 1; flex-direction: column; flex-wrap: nowrap; align-items: flex-start; justify-content: center; top: auto; width: 100%;">
+            <ui:Label text="Shop" display-tooltip-when-elided="true" name="title-shop" enable-rich-text="true" style="font-size: 36px; -unity-text-align: upper-left; margin-bottom: 20px; width: 78%; flex-shrink: 0; display: flex; overflow: visible; align-items: stretch; white-space: nowrap; color: rgb(255, 255, 255); flex-direction: column; flex-wrap: nowrap; height: 107px; justify-content: flex-start;" />
+            <ui:VisualElement name="buttons-container" style="width: 70%;">
+                <ui:Button text="Back" display-tooltip-when-elided="true" name="back-button" class="btnStyles" style="font-size: 24px; margin-bottom: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
