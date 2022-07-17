@@ -7,6 +7,11 @@ public class MainPlayer : MonoBehaviour
     public int exp = 0;
     public int health = 3;
 
+    private void Start()
+    {
+        
+    }
+
     private void Update()
     {
         if (!isAlive())
