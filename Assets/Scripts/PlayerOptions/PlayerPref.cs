@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerPref : MonoBehaviour
 {
     private MainPlayer player;
-    private int playerCurrentExp = 0;
+    private int playerCurrentExp;
     private int playerAllExp = 0;
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<MainPlayer>();
+        if (PlayerPrefs.HasKey("SavedExp")) playerAllExp = PlayerPrefs.GetInt("SavedExp");//если есть поле XP то берем полное значение
     }
 
     void SaveGame()
@@ -23,14 +24,14 @@ public class PlayerPref : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.health>0)
-        { 
+        if (player.isAlive())
+        {
             playerCurrentExp = player.exp;
         }
-        else
-        {
-            playerAllExp += playerCurrentExp;
-            SaveGame();
-        }
+    }
+    private void OnDestroy()
+    {
+        playerAllExp += playerCurrentExp;
+        SaveGame();
     }
 }

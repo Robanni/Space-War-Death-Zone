@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3333806787169800835}
   - component: {fileID: 3333806787169800836}
   - component: {fileID: 3333806786875593057}
+  - component: {fileID: 4952857617958476960}
   m_Layer: 3
   m_Name: MainPlayer
   m_TagString: Player
@@ -163,7 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6174499515117571086, guid: 06e87e8cb663e734faa252c93d9d83ac, type: 3}
   firePoint: {fileID: 3333806788077707233}
-  bulletForce: 0.15
   shootingSpeed: 0.5
 --- !u!114 &3333806786875593057
 MonoBehaviour:
@@ -179,6 +179,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exp: 0
   health: 3
+--- !u!114 &4952857617958476960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3333806787169800832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde0dc43e1f15dc48a9672f7df79d7a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3333806788077707232
 GameObject:
   m_ObjectHideFlags: 0
