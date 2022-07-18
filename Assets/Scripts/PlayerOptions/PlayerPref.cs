@@ -15,6 +15,8 @@ public class PlayerPref : MonoBehaviour
 
     void SaveGame()
     {
+        if(!PlayerPrefs.HasKey("MaxHealth")) PlayerPrefs.SetInt("MaxHealth", 1);
+
         PlayerPrefs.SetInt("SavedExp", playerAllExp);
         PlayerPrefs.Save();
     }
