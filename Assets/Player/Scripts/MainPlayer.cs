@@ -5,11 +5,12 @@ using UnityEngine;
 public class MainPlayer : MonoBehaviour
 {
     public int exp = 0;
-    public int health = 3;
+    [HideInInspector]
+    public int health = 1;
 
     private void Start()
     {
-        
+        if(PlayerPrefs.HasKey("MaxHealth"))health = PlayerPrefs.GetInt("MaxHealth");//Берем значение максимального хп
     }
 
     private void Update()
@@ -25,7 +26,6 @@ public class MainPlayer : MonoBehaviour
         {
             int damage = collision.gameObject.GetComponent<BaseEnemyBullet>().damage;
             takeDamege(damage);
-            
         }
     }
 
