@@ -11,11 +11,13 @@ public class UIController : MonoBehaviour
     private Button buttonShop;
     private Button buttonBack;
     private Button buttonExitGame;
+    private Label coinLabel;
 
     // Start is called before the first frame update
     void Awake()
     {
         var root = GetComponent<UIDocument>().rootVisualElement; // Search a root element of window
+        
 
         // Get refs of Windows
         var mainWin = root.Q<VisualElement>("MainWin");
@@ -26,6 +28,10 @@ public class UIController : MonoBehaviour
         buttonShop = root.Q<Button>("shop-button");
         buttonBack = root.Q<Button>("back-button");
         buttonExitGame = root.Q<Button>("exit-button");
+
+        coinLabel = root.Q<Label>("coin-bar");
+
+        coinLabel.text = "2";
 
         // Add events on buttons
         buttonStart.clicked += StartButtonPressed; 
