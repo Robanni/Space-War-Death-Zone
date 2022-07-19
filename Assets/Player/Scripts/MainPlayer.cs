@@ -5,7 +5,13 @@ using UnityEngine;
 public class MainPlayer : MonoBehaviour
 {
     public int exp = 0;
-    public int health = 3;
+    [HideInInspector]
+    public int health = 1;
+
+    private void Start()
+    {
+        if(PlayerPrefs.HasKey("MaxHealth"))health = PlayerPrefs.GetInt("MaxHealth");//Берем значение максимального хп
+    }
 
     private void Update()
     {
@@ -16,15 +22,14 @@ public class MainPlayer : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "EnemyBullet")
+        if(collision.gameObject.CompareTag( "EnemyBullet"))
         {
             int damage = collision.gameObject.GetComponent<BaseEnemyBullet>().damage;
             takeDamege(damage);
-            
         }
     }
 
-    bool isAlive()
+    public bool isAlive()
     { return health > 0; }
     void takeDamege(int damage)//получение урона
     {

@@ -1,27 +1,27 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Styles/btnStyles.uss?fileID=7433441132597879392&amp;guid=51babe257444b1a47a65643cdf416d6e&amp;type=3#btnStyles" />
-    <ui:VisualElement name="MainWin" class="hide" style="flex-grow: 1;">
-        <ui:VisualElement name="container" style="padding-left: 50px; padding-right: 50px; padding-top: 20px; padding-bottom: 20px; flex-grow: 1; flex-direction: column; flex-wrap: nowrap; align-items: flex-start; justify-content: center; top: auto; width: 100%;">
+    <ui:VisualElement name="MainWin" style="flex-grow: 1; background-color: rgb(255, 255, 255);">
+        <ui:VisualElement name="container" style="padding-left: 50px; padding-right: 50px; padding-top: 20px; padding-bottom: 70px; flex-grow: 1; flex-direction: column; flex-wrap: nowrap; align-items: center; justify-content: center; top: auto; width: 100%;">
             <ui:VisualElement name="title-container" style="flex-direction: row; flex-grow: 0; flex-shrink: 0; width: 100%;">
-                <ui:Label text="Space War &#10;Death Zone" display-tooltip-when-elided="true" name="title-header" enable-rich-text="true" style="font-size: 36px; -unity-text-align: upper-left; margin-bottom: 15px; width: 100%; flex-shrink: 0; display: flex; overflow: visible; align-items: stretch; white-space: nowrap; color: rgb(255, 255, 255); flex-direction: column; flex-wrap: nowrap; height: 80px; justify-content: flex-start;" />
+                <ui:Label text="Space War &#10;Death Zone" display-tooltip-when-elided="true" name="title-header" enable-rich-text="true" style="font-size: 36px; -unity-text-align: upper-center; margin-bottom: 20px; width: 100%; flex-shrink: 0; display: flex; overflow: visible; align-items: stretch; white-space: nowrap; color: rgb(7, 7, 7); flex-direction: column; flex-wrap: nowrap; height: 80px; justify-content: flex-start;" />
             </ui:VisualElement>
-            <ui:VisualElement name="Buttons" style="width: 71%; flex-grow: 0.7; height: 0; align-items: stretch; justify-content: center;">
-                <ui:VisualElement name="btn-box" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/button.png?fileID=2800000&amp;guid=1fb8a704278b580439cc759b6753e817&amp;type=3#button&apos;); width: 200px; height: 100px;">
+            <ui:VisualElement name="Buttons" style="width: 71%; flex-grow: 0.7; height: 0; align-items: center; justify-content: flex-end; max-height: 400px;">
+                <ui:VisualElement name="btn-box" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Start_button.png?fileID=2800000&amp;guid=afd0aa3eefc4fb842ac8efddff222baf&amp;type=3#Start_button&apos;); width: 250px; height: 60px; margin-bottom: 15px;">
                     <ui:Button text="Start" display-tooltip-when-elided="true" name="start-button" class="btnStyles" style="background-image: none; height: 100%; padding-left: 6px; padding-right: 6px; padding-top: 1px; padding-bottom: 1px; max-height: 200px;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="btn-box" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/button.png?fileID=2800000&amp;guid=1fb8a704278b580439cc759b6753e817&amp;type=3#button&apos;); width: 200px; height: 100px;">
+                <ui:VisualElement name="btn-box" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Shop_button.png?fileID=2800000&amp;guid=2f9777e5beccecb46afd5a8db4530cdf&amp;type=3#Shop_button&apos;); width: 250px; height: 60px; margin-bottom: 15px;">
                     <ui:Button text="Start" display-tooltip-when-elided="true" name="shop-button" class="btnStyles" style="background-image: none; height: 100%; max-height: 200px;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="btn-box" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/button.png?fileID=2800000&amp;guid=1fb8a704278b580439cc759b6753e817&amp;type=3#button&apos;); width: 200px; height: 100px;">
+                <ui:VisualElement name="btn-box" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Options_button.png?fileID=2800000&amp;guid=a603a3efb3e0e0e4c9992c9385ab3d58&amp;type=3#Options_button&apos;); width: 250px; height: 60px; margin-bottom: 15px;">
                     <ui:Button text="Start" display-tooltip-when-elided="true" name="options-button" class="btnStyles" style="background-image: none; height: 100%; max-height: 300px;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="btn-box" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/button.png?fileID=2800000&amp;guid=1fb8a704278b580439cc759b6753e817&amp;type=3#button&apos;); width: 200px; height: 100px;">
+                <ui:VisualElement name="btn-box" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Back_button.png?fileID=2800000&amp;guid=0c27958a0094be340abb4ade1cd55d5f&amp;type=3#Back_button&apos;); width: 250px; height: 60px; margin-bottom: 15px;">
                     <ui:Button text="Start" display-tooltip-when-elided="true" name="exit-button" class="btnStyles" style="background-image: none; height: 100%;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="ShopWin" style="flex-grow: 1; margin-bottom: 0; background-color: rgb(255, 255, 255);">
+    <ui:VisualElement name="ShopWin" class="hide" style="flex-grow: 1; margin-bottom: 0; background-color: rgb(255, 255, 255);">
         <ui:VisualElement name="container" style="padding-left: 15px; padding-right: 15px; padding-top: 40px; padding-bottom: 40px; flex-grow: 1; flex-direction: column; flex-wrap: nowrap; align-items: flex-start; justify-content: center; top: auto; width: 100%;">
             <ui:VisualElement name="title-container" style="flex-direction: row; flex-grow: 0; flex-shrink: 1; justify-content: space-around; width: 100%; flex-wrap: nowrap; align-items: stretch; margin-bottom: 0;">
                 <ui:Label text="Shop" display-tooltip-when-elided="true" name="title-shop" enable-rich-text="true" style="font-size: 36px; -unity-text-align: upper-left; margin-bottom: 0; width: 78%; flex-shrink: 0; display: flex; overflow: visible; align-items: center; white-space: nowrap; color: rgb(0, 0, 0); flex-direction: column; flex-wrap: nowrap; height: 107px; justify-content: center;" />
@@ -31,35 +31,43 @@
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="shop-container" style="flex-grow: 1; height: 30%; width: 100%; margin-bottom: 10px;">
-                <ui:VisualElement name="shop-item-damage" class="shop-item" style="height: 33%; justify-content: space-around; align-items: center; flex-grow: 0; width: 100%; flex-wrap: nowrap; max-width: none;">
-                    <ui:Label text="2" display-tooltip-when-elided="true" name="cost-hp" style="font-size: 24px; color: rgb(51, 47, 47); -unity-text-align: lower-right; white-space: normal; left: 9px; width: 100px; padding-right: 13px;" />
-                    <ui:VisualElement name="coin-image" style="background-image: url(&apos;project://database/Assets/Player/Img/coin.png?fileID=2800000&amp;guid=638f86e4e9586e5498b3476cb7035664&amp;type=3#coin&apos;); opacity: 1; overflow: visible; width: 50px; height: 50px; align-items: center; justify-content: center;" />
-                    <ui:VisualElement name="btn-box" style="flex-grow: 1; width: 100px; height: 100px; justify-content: center; flex-direction: column; background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/btn-add.png?fileID=2800000&amp;guid=07c40a5cfe233244daea2dce112c8840&amp;type=3#btn-add&apos;); max-width: 100px; max-height: 100px;">
-                        <ui:Button text="Button" display-tooltip-when-elided="true" name="shop-btn-damage" class="shop-btn" style="visibility: visible; width: 83%; height: 56%; flex-shrink: 0; flex-wrap: nowrap; flex-direction: column; justify-content: flex-start; align-items: auto;" />
+                <ui:VisualElement name="shop-item-hp" class="shop-item" style="height: 120px; justify-content: space-around; align-items: center; flex-grow: 0; width: 100%; flex-wrap: nowrap; max-width: none;">
+                    <ui:Label text="2" display-tooltip-when-elided="true" name="cost-hp" style="font-size: 24px; color: rgb(51, 47, 47); -unity-text-align: lower-right; white-space: normal; left: auto; width: 100px; padding-right: 13px; min-width: 100px;" />
+                    <ui:VisualElement name="btn-box" style="flex-grow: 1; width: 30px; height: 30px; justify-content: center; flex-direction: column; background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/btn-add.png?fileID=2800000&amp;guid=07c40a5cfe233244daea2dce112c8840&amp;type=3#btn-add&apos;); max-width: 30px; max-height: 30px; min-width: 30px; min-height: 30px; margin-right: 0;">
+                        <ui:Button text="Button" display-tooltip-when-elided="true" name="shop-btn-hp" class="shop-btn" style="visibility: visible; width: 83%; height: 56%; flex-shrink: 0; flex-wrap: nowrap; flex-direction: column; justify-content: flex-start; align-items: auto;" />
                     </ui:VisualElement>
-                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Player/Img/HP.png?fileID=2800000&amp;guid=899406cf85128034c824b339efa7aec3&amp;type=3#HP&apos;); width: 70px; height: 70px;" />
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Player/Img/HP.png?fileID=2800000&amp;guid=899406cf85128034c824b339efa7aec3&amp;type=3#HP&apos;); width: 30px; height: 30px; max-width: 30px; max-height: 30px; min-width: auto; min-height: auto; margin-right: 0;" />
                     <ui:Label text="LVL 1" display-tooltip-when-elided="true" name="hp-number" style="font-size: 24px; color: rgb(0, 0, 0); width: 35%;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="shop-item-damage" class="shop-item" style="height: 33%; justify-content: space-around; align-items: center; flex-grow: 0; width: 100%;">
-                    <ui:Label text="2" display-tooltip-when-elided="true" name="cost-hp" style="font-size: 24px; color: rgb(51, 47, 47); -unity-text-align: lower-right; white-space: normal; left: 9px; width: 100px; padding-right: 13px;" />
-                    <ui:VisualElement name="coin-image" style="background-image: url(&apos;project://database/Assets/Player/Img/coin.png?fileID=2800000&amp;guid=638f86e4e9586e5498b3476cb7035664&amp;type=3#coin&apos;); opacity: 1; overflow: visible; width: 50px; height: 50px; align-items: center; justify-content: center;" />
-                    <ui:VisualElement name="btn-box" style="flex-grow: 1; width: 100px; height: 100px; justify-content: center; flex-direction: column; background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/btn-add.png?fileID=2800000&amp;guid=07c40a5cfe233244daea2dce112c8840&amp;type=3#btn-add&apos;); max-width: 100px; max-height: 100px;">
+                <ui:VisualElement name="shop-item-damage" class="shop-item" style="height: 120px; justify-content: space-around; align-items: center; flex-grow: 0; width: 100%; flex-wrap: nowrap; max-width: none;">
+                    <ui:Label text="2" display-tooltip-when-elided="true" name="cost-damage" style="font-size: 24px; color: rgb(51, 47, 47); -unity-text-align: lower-right; white-space: normal; left: auto; width: 100px; padding-right: 13px; min-width: 100px;" />
+                    <ui:VisualElement name="btn-box" style="flex-grow: 1; width: 30px; height: 30px; justify-content: center; flex-direction: column; background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/btn-add.png?fileID=2800000&amp;guid=07c40a5cfe233244daea2dce112c8840&amp;type=3#btn-add&apos;); max-width: 30px; max-height: 30px; min-width: 30px; min-height: 30px; margin-right: 0;">
                         <ui:Button text="Button" display-tooltip-when-elided="true" name="shop-btn-damage" class="shop-btn" style="visibility: visible; width: 83%; height: 56%; flex-shrink: 0; flex-wrap: nowrap; flex-direction: column; justify-content: flex-start; align-items: auto;" />
                     </ui:VisualElement>
-                    <ui:Label text="LVL 1" display-tooltip-when-elided="true" name="damage-number" style="font-size: 24px; color: rgb(0, 0, 0); width: 35%;" />
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Player/Img/HP.png?fileID=2800000&amp;guid=899406cf85128034c824b339efa7aec3&amp;type=3#HP&apos;); width: 30px; height: 30px; max-width: 30px; max-height: 30px; min-width: auto; min-height: auto; margin-right: 0;" />
+                    <ui:Label text="LVL 1" display-tooltip-when-elided="true" name="hp-number" style="font-size: 24px; color: rgb(0, 0, 0); width: 35%;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="shop-item-damage" class="shop-item" style="height: 33%; justify-content: space-around; align-items: center; flex-grow: 0; width: 100%;">
-                    <ui:Label text="2" display-tooltip-when-elided="true" name="cost-hp" style="font-size: 24px; color: rgb(51, 47, 47); -unity-text-align: lower-right; white-space: normal; left: 9px; width: 100px; padding-right: 13px;" />
-                    <ui:VisualElement name="coin-image" style="background-image: url(&apos;project://database/Assets/Player/Img/coin.png?fileID=2800000&amp;guid=638f86e4e9586e5498b3476cb7035664&amp;type=3#coin&apos;); opacity: 1; overflow: visible; width: 50px; height: 50px; align-items: center; justify-content: center;" />
-                    <ui:VisualElement name="btn-box" style="flex-grow: 1; width: 100px; height: 100px; justify-content: center; flex-direction: column; background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/btn-add.png?fileID=2800000&amp;guid=07c40a5cfe233244daea2dce112c8840&amp;type=3#btn-add&apos;); max-width: 100px; max-height: 100px;">
-                        <ui:Button text="Button" display-tooltip-when-elided="true" name="shop-btn-damage" class="shop-btn" style="visibility: visible; width: 83%; height: 56%; flex-shrink: 0; flex-wrap: nowrap; flex-direction: column; justify-content: flex-start; align-items: auto;" />
+                <ui:VisualElement name="shop-item-speedShoot" class="shop-item" style="height: 120px; justify-content: space-around; align-items: center; flex-grow: 0; width: 100%; flex-wrap: nowrap; max-width: none;">
+                    <ui:Label text="2" display-tooltip-when-elided="true" name="cost-speedShoot" style="font-size: 24px; color: rgb(51, 47, 47); -unity-text-align: lower-right; white-space: normal; left: auto; width: 100px; padding-right: 13px; min-width: 100px;" />
+                    <ui:VisualElement name="btn-box" style="flex-grow: 1; width: 30px; height: 30px; justify-content: center; flex-direction: column; background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/btn-add.png?fileID=2800000&amp;guid=07c40a5cfe233244daea2dce112c8840&amp;type=3#btn-add&apos;); max-width: 30px; max-height: 30px; min-width: 30px; min-height: 30px; margin-right: 0;">
+                        <ui:Button text="Button" display-tooltip-when-elided="true" name="shop-btn-speedShoot" class="shop-btn" style="visibility: visible; width: 83%; height: 56%; flex-shrink: 0; flex-wrap: nowrap; flex-direction: column; justify-content: flex-start; align-items: auto;" />
                     </ui:VisualElement>
-                    <ui:Label text="LVL 1" display-tooltip-when-elided="true" name="speedShoot-number" style="font-size: 24px; color: rgb(0, 0, 0); width: 35%;" />
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Player/Img/HP.png?fileID=2800000&amp;guid=899406cf85128034c824b339efa7aec3&amp;type=3#HP&apos;); width: 30px; height: 30px; max-width: 30px; max-height: 30px; min-width: auto; min-height: auto; margin-right: 0;" />
+                    <ui:Label text="LVL 1" display-tooltip-when-elided="true" name="hp-number" style="font-size: 24px; color: rgb(0, 0, 0); width: 35%;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="buttons-container" style="width: 100%;">
                 <ui:Button text="Back" display-tooltip-when-elided="true" name="back-button" />
             </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="OptionsWin" class="hide" style="flex-grow: 1; background-color: rgb(250, 249, 249);">
+        <ui:VisualElement name="container" style="flex-grow: 1; padding-left: 20px; padding-right: 20px; padding-top: 30px; padding-bottom: 30px; justify-content: space-around; align-items: center;">
+            <ui:Label text="Options&#10;" display-tooltip-when-elided="true" name="title-options" style="-unity-text-align: upper-center; font-size: 36px; color: rgb(5, 5, 5);" />
+            <ui:VisualElement name="buttuns-options" style="height: 90%; margin-bottom: 20px; width: 100%;" />
+            <ui:Label display-tooltip-when-elided="true" name="box-back-options" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Back_button.png?fileID=2800000&amp;guid=0c27958a0094be340abb4ade1cd55d5f&amp;type=3#Back_button&apos;); min-height: auto; min-width: auto; width: 200px; height: 50px;">
+                <ui:Button display-tooltip-when-elided="true" name="back-options" style="visibility: visible; width: 198px; height: 54px; opacity: 0;" />
+            </ui:Label>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
