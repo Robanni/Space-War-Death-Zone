@@ -1,24 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerPref : MonoBehaviour
 {
     private MainPlayer player;
     private int playerCurrentExp;
     private int playerAllExp = 0;
+
+    
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<MainPlayer>();
-        if (PlayerPrefs.HasKey("SavedExp")) playerAllExp = PlayerPrefs.GetInt("SavedExp");//если есть поле XP то берем полное значение
+        if (PlayerPrefs.HasKey("Coins")) playerAllExp = PlayerPrefs.GetInt("Coins");//если есть поле XP то берем полное значение
     }
 
     void SaveGame()
     {
-        if(!PlayerPrefs.HasKey("MaxHealth")) PlayerPrefs.SetInt("MaxHealth", 1);
+        if(!PlayerPrefs.HasKey("HealthLevel")) PlayerPrefs.SetInt("HealthLevel", 1);
 
-        PlayerPrefs.SetInt("SavedExp", playerAllExp);
+        PlayerPrefs.SetInt("Coins", playerAllExp);
         PlayerPrefs.Save();
     }
     // Update is called once per frame
@@ -33,5 +36,6 @@ public class PlayerPref : MonoBehaviour
     {
         playerAllExp += playerCurrentExp;
         SaveGame();
+        SceneManager.LoadScene("Menu");
     }
 }

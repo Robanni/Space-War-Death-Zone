@@ -6,11 +6,12 @@ public class MainPlayer : MonoBehaviour
 {
     public int exp = 0;
     [HideInInspector]
-    public int health = 1;
+    public int health = 0;
 
     private void Start()
     {
         if(PlayerPrefs.HasKey("MaxHealth"))health = PlayerPrefs.GetInt("MaxHealth");//Берем значение максимального хп
+        health = PlayerPrefs.GetInt("HealthLevel") + 1;
     }
 
     private void Update()
@@ -35,4 +36,6 @@ public class MainPlayer : MonoBehaviour
     {
         health -= damage;
     }
+
+
 }
