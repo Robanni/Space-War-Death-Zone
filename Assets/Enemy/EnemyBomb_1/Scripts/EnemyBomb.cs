@@ -20,7 +20,7 @@ public class EnemyBomb : MonoBehaviour
         pos.y -= speed* Time.deltaTime;
         transform.position = pos;
 
-        if (transform.position.y < -6.5f)
+        if (transform.position.y < 0f)
         {
             Destroy(gameObject);
         }

@@ -20,7 +20,7 @@ public class BaseEnemy : MonoBehaviour
             FindObjectOfType<MainPlayer>().exp += expiriens;
         }
         
-        if(transform.position.y < -7f)//”ничтожает объект если он ниже карты
+        if(transform.position.y < 0f)//”ничтожает объект если он ниже карты
         {
             Destroy(gameObject);
         }

@@ -277,7 +277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 5.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -318,11 +318,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3333806787169800834, guid: 6f2d528161f1be946b50b8e7efed8dfb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03627491
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3333806787169800834, guid: 6f2d528161f1be946b50b8e7efed8dfb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8825645
+      value: 1.1374354
       objectReference: {fileID: 0}
     - target: {fileID: 3333806787169800834, guid: 6f2d528161f1be946b50b8e7efed8dfb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -397,7 +397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679939884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.016562127, y: 5.05, z: -0.29114038}
+  m_LocalPosition: {x: -0.016562127, y: 10.07, z: -0.29114038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -596,7 +596,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081471816}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.09, y: 1.26, z: 28.7}
+  m_LocalPosition: {x: 0.09, y: 6.2799997, z: 28.7}
   m_LocalScale: {x: 15, y: 3.1875, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1164,7 +1164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039394916}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.05, y: 5.02, z: 0}
+  m_LocalPosition: {x: 0.05, y: 10.04, z: 0}
   m_LocalScale: {x: 0.73, y: 0.73, z: 0.73}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1187,3 +1187,4 @@ MonoBehaviour:
   enemyPrefubArr:
   - {fileID: 7289229481557758752, guid: 1d561e614b74c634eae1f3e9f11bb211, type: 3}
   - {fileID: 7837768723938556973, guid: 4ee229245d0625f47a3e42204bd91f9b, type: 3}
+  - {fileID: 6241672362902428838, guid: 010889f778cd304488a11c5491c35073, type: 3}

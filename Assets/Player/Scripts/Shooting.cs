@@ -13,7 +13,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        shootingSpeed = PlayerPrefs.GetInt("AtackSpeedLevel") + 1;
+        shootingSpeed = 2 / PlayerPrefs.GetInt("AtackSpeedLevel");
         StartCoroutine(shooting());
     }
 

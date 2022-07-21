@@ -21,6 +21,8 @@ public class RegenerationScript : MonoBehaviour
         float yMovement = speed * Time.deltaTime;
         pos.y -= yMovement;
         transform.position = pos;
+
+        if(transform.position.y < 0f) Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

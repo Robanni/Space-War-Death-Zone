@@ -5,6 +5,7 @@ using UnityEngine;
 public class BaseEnemyBullet : MonoBehaviour
 {
     public int damage = 1;
+    public float bulletForce = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class BaseEnemyBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < -6.5)
+        if (transform.position.y < 0f)
         {
             Destroy(gameObject);
         }

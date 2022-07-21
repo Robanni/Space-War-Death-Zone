@@ -13,8 +13,8 @@ public class SimpleEnemy : BaseEnemy
     public float speedX = 0.1f;
 
     public float AttackSpeed = 1;
-    public float bulletForce = 10f;
-    public GameObject bulletPrefab;
+
+    public BaseEnemyBullet bulletPrefab;
     public Transform firePoint;
     // Start is called before the first frame update
     void Start()
@@ -51,11 +51,11 @@ public class SimpleEnemy : BaseEnemy
     {
         while (true)
         {
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, bulletPrefab.transform.rotation);/*
+            GameObject bullet = Instantiate(bulletPrefab.gameObject, firePoint.position, bulletPrefab.transform.rotation);/*
             создание объекта пули*/
             Rigidbody2D rg = bullet.GetComponent<Rigidbody2D>();/*взятие физ клмпоненты*/
 
-            rg.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);/* добавление импульса пуле*/
+            rg.AddForce(firePoint.up * bulletPrefab.bulletForce, ForceMode2D.Impulse);/* добавление импульса пуле*/
 
             yield return new WaitForSecondsRealtime(AttackSpeed);// Скоррость срельбы
         }

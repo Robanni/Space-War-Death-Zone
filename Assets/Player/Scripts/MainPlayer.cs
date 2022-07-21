@@ -10,8 +10,7 @@ public class MainPlayer : MonoBehaviour
 
     private void Start()
     {
-        if(PlayerPrefs.HasKey("MaxHealth"))health = PlayerPrefs.GetInt("MaxHealth");//Берем значение максимального хп
-        health = PlayerPrefs.GetInt("HealthLevel") + 1;
+        health = PlayerPrefs.GetInt("HealthLevel") ;
     }
 
     private void Update()

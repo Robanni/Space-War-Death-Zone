@@ -9,7 +9,7 @@ public class PlayerBullet : MonoBehaviour
 
     private void Start()
     {
-        damage = 1/PlayerPrefs.GetInt("AttackSpeedLevel");
+        damage = PlayerPrefs.GetInt("DamageLevel");
     }
     void Update()
     {
