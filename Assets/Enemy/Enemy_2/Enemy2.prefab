@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 8205130216368185105}
   - component: {fileID: 248919789692500586}
   - component: {fileID: 248919789692500585}
+  - component: {fileID: 4991001801549971528}
   m_Layer: 6
   m_Name: Enemy2
   m_TagString: Enemy
@@ -195,3 +196,23 @@ MonoBehaviour:
   firePoint:
   - {fileID: 248919789624508821}
   - {fileID: 248919788462852826}
+--- !u!95 &4991001801549971528
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6241672362902428838}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14d8ed249cc984848be60a9e190a2dcd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
