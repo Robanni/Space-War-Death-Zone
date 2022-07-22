@@ -68,7 +68,7 @@ public class ShopController : MonoBehaviour
             case "shop-btn-hp":
                 btn.clicked += () =>
                 {
-                    if (coinsPlayer >= Mathf.Pow(cost, PlayerPrefs.GetInt("HealthLevel")))
+                    if (coinsPlayer >= (int)Mathf.Pow(cost, PlayerPrefs.GetInt("HealthLevel")))
                     {
                         PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - (int)Mathf.Pow(cost, PlayerPrefs.GetInt("HealthLevel")));
                         hpLvl.text = "LVL " + PlayerPrefs.GetInt("HealthLevel").ToString();
@@ -84,7 +84,7 @@ public class ShopController : MonoBehaviour
             case "shop-btn-damage":
                 btn.clicked += () =>
                 {
-                    if (coinsPlayer >= Mathf.Pow(cost, PlayerPrefs.GetInt("DamageLevel")))
+                    if (coinsPlayer >= (int)Mathf.Pow(cost, PlayerPrefs.GetInt("DamageLevel")))
                     {
                         PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - (int)Mathf.Pow(cost, PlayerPrefs.GetInt("DamageLevel")));
                         damageLvl.text = "LVL " + PlayerPrefs.GetInt("DamageLevel").ToString();
@@ -101,7 +101,7 @@ public class ShopController : MonoBehaviour
             case "shop-btn-attackSpeed":
                 btn.clicked += () =>
                 {
-                    if (coinsPlayer >= Mathf.Pow(cost, PlayerPrefs.GetInt("AttackSpeedLevel")))
+                    if (coinsPlayer >= (int)Mathf.Pow(cost, PlayerPrefs.GetInt("AttackSpeedLevel")))
                     {
                         PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - (int)Mathf.Pow(cost, PlayerPrefs.GetInt("AttackSpeedLevel")));
                         attackSpeedLvl.text = "LVL " + PlayerPrefs.GetInt("AttackSpeedLevel").ToString();
