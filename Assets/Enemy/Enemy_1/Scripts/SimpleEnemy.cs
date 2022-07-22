@@ -22,7 +22,7 @@ public class SimpleEnemy : BaseEnemy
         Camera cam = Camera.main;
 
         maxX = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x;
-
+  
         posY = transform.position.y;
         posX = transform.position.x;
         StartCoroutine(shooting());
