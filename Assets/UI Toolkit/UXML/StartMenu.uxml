@@ -6,16 +6,16 @@
                 <ui:Label text="Space War &#10;Death Zone" display-tooltip-when-elided="true" name="title-header" enable-rich-text="true" style="font-size: 36px; -unity-text-align: upper-center; margin-bottom: 20px; width: 100%; flex-shrink: 0; display: flex; overflow: visible; align-items: stretch; white-space: nowrap; color: rgb(7, 7, 7); flex-direction: column; flex-wrap: nowrap; height: 80px; justify-content: flex-start; -unity-font: none; -unity-font-style: normal;" />
             </ui:VisualElement>
             <ui:VisualElement name="Buttons" style="width: 71%; flex-grow: 0.7; height: 0; align-items: center; justify-content: flex-end; max-height: 400px;">
-                <ui:VisualElement name="btn-box" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Start_button.png?fileID=2800000&amp;guid=afd0aa3eefc4fb842ac8efddff222baf&amp;type=3#Start_button&apos;); width: 250px; height: 60px; margin-bottom: 15px;">
+                <ui:VisualElement name="btn-box-start" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Start_button.png?fileID=2800000&amp;guid=afd0aa3eefc4fb842ac8efddff222baf&amp;type=3#Start_button&apos;); width: 250px; height: 60px; margin-bottom: 15px;">
                     <ui:Button text="Start" display-tooltip-when-elided="true" name="start-button" class="btnStyles" style="background-image: none; height: 100%; padding-left: 6px; padding-right: 6px; padding-top: 1px; padding-bottom: 1px; max-height: 200px;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="btn-box" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Shop_button.png?fileID=2800000&amp;guid=2f9777e5beccecb46afd5a8db4530cdf&amp;type=3#Shop_button&apos;); width: 250px; height: 60px; margin-bottom: 15px;">
+                <ui:VisualElement name="btn-box-shop" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Shop_button.png?fileID=2800000&amp;guid=2f9777e5beccecb46afd5a8db4530cdf&amp;type=3#Shop_button&apos;); width: 250px; height: 60px; margin-bottom: 15px;">
                     <ui:Button text="Start" display-tooltip-when-elided="true" name="shop-button" class="btnStyles" style="background-image: none; height: 100%; max-height: 200px;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="btn-box" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Options_button.png?fileID=2800000&amp;guid=a603a3efb3e0e0e4c9992c9385ab3d58&amp;type=3#Options_button&apos;); width: 250px; height: 60px; margin-bottom: 15px;">
+                <ui:VisualElement name="btn-box-options" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Options_button.png?fileID=2800000&amp;guid=a603a3efb3e0e0e4c9992c9385ab3d58&amp;type=3#Options_button&apos;); width: 250px; height: 60px; margin-bottom: 15px;">
                     <ui:Button text="Start" display-tooltip-when-elided="true" name="options-button" class="btnStyles" style="background-image: none; height: 100%; max-height: 300px;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="btn-box" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Back_button.png?fileID=2800000&amp;guid=0c27958a0094be340abb4ade1cd55d5f&amp;type=3#Back_button&apos;); width: 250px; height: 60px; margin-bottom: 15px;">
+                <ui:VisualElement name="btn-box-exit" class="btn-box" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/Back_button.png?fileID=2800000&amp;guid=0c27958a0094be340abb4ade1cd55d5f&amp;type=3#Back_button&apos;); width: 250px; height: 60px; margin-bottom: 15px;">
                     <ui:Button text="Start" display-tooltip-when-elided="true" name="exit-button" class="btnStyles" style="background-image: none; height: 100%;" />
                 </ui:VisualElement>
             </ui:VisualElement>

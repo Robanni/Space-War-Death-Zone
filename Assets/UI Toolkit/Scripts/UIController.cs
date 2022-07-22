@@ -15,6 +15,7 @@ public class UIController : MonoBehaviour
 
     private Label coinLabel;
 
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -32,8 +33,6 @@ public class UIController : MonoBehaviour
         buttonBack = root.Q<Button>("back-button");
         buttonExitGame = root.Q<Button>("exit-button");
         buttonOptions = root.Q<Button>("options-button");
-
-
 
         coinLabel = root.Q<Label>("coin-bar");
 
@@ -63,8 +62,6 @@ public class UIController : MonoBehaviour
         buttonExitGame.clicked += ExitButtonPressed;
 
     }
-
-
 
     private void StartButtonPressed()
     {

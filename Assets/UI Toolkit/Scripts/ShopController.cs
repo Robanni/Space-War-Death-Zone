@@ -9,7 +9,9 @@ public class ShopController : MonoBehaviour
     private Button btnShopDamage;
     private Button btnShopAttackSpeed;
 
-    private int cost = 2;
+    private int powCostHp = 2;
+    private int powCostDamage = 5;
+    private int powCostAttackSpeed = 4;
     private int coinsPlayer = 0;
 
     private Label hpLvl;
@@ -23,7 +25,8 @@ public class ShopController : MonoBehaviour
     private Label coinBar;
 
     // Start is called before the first frame update
-    private void Awake()
+
+    private void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
         coinsPlayer = PlayerPrefs.GetInt("Coins");
@@ -50,9 +53,9 @@ public class ShopController : MonoBehaviour
         damageLvl.text = "LVL " + PlayerPrefs.GetInt("DamageLevel").ToString();
         attackSpeedLvl.text = "LVL " + PlayerPrefs.GetInt("AttackSpeedLevel").ToString();
 
-        costHP.text = Mathf.Pow(cost, PlayerPrefs.GetInt("HealthLevel")).ToString();
-        costDamage.text = Mathf.Pow(cost, PlayerPrefs.GetInt("DamageLevel")).ToString();
-        costAttackSpeed.text = Mathf.Pow(cost, PlayerPrefs.GetInt("AttackSpeedLevel")).ToString();
+        costHP.text = Mathf.Pow(powCostHp, PlayerPrefs.GetInt("HealthLevel")).ToString();
+        costDamage.text = Mathf.Pow(powCostDamage, PlayerPrefs.GetInt("DamageLevel")).ToString();
+        costAttackSpeed.text = Mathf.Pow(powCostAttackSpeed, PlayerPrefs.GetInt("AttackSpeedLevel")).ToString();
 
         coinBar.text = PlayerPrefs.GetInt("Coins").ToString();
 
@@ -68,15 +71,17 @@ public class ShopController : MonoBehaviour
             case "shop-btn-hp":
                 btn.clicked += () =>
                 {
-                    if (coinsPlayer >= (int)Mathf.Pow(cost, PlayerPrefs.GetInt("HealthLevel")))
+                    if (coinsPlayer >= (int)Mathf.Pow(powCostHp, PlayerPrefs.GetInt("HealthLevel")))
                     {
-                        PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - (int)Mathf.Pow(cost, PlayerPrefs.GetInt("HealthLevel")));
+                        PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - (int)Mathf.Pow(powCostHp, PlayerPrefs.GetInt("HealthLevel")));
                         hpLvl.text = "LVL " + PlayerPrefs.GetInt("HealthLevel").ToString();
                         PlayerPrefs.SetInt("HealthLevel", PlayerPrefs.GetInt("HealthLevel") + 1);
 
-                        costHP.text = Mathf.Pow(cost, PlayerPrefs.GetInt("HealthLevel")).ToString();
+                        costHP.text = Mathf.Pow(powCostHp, PlayerPrefs.GetInt("HealthLevel")).ToString();
                         hpLvl.text = "LVL " + PlayerPrefs.GetInt("HealthLevel").ToString();
                         coinBar.text = PlayerPrefs.GetInt("Coins").ToString();
+                        coinsPlayer = PlayerPrefs.GetInt("Coins");
+                        
                     }
                 };
 
@@ -84,15 +89,16 @@ public class ShopController : MonoBehaviour
             case "shop-btn-damage":
                 btn.clicked += () =>
                 {
-                    if (coinsPlayer >= (int)Mathf.Pow(cost, PlayerPrefs.GetInt("DamageLevel")))
+                    if (coinsPlayer >= (int)Mathf.Pow(powCostDamage, PlayerPrefs.GetInt("DamageLevel")))
                     {
-                        PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - (int)Mathf.Pow(cost, PlayerPrefs.GetInt("DamageLevel")));
+                        PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - (int)Mathf.Pow(powCostDamage, PlayerPrefs.GetInt("DamageLevel")));
                         damageLvl.text = "LVL " + PlayerPrefs.GetInt("DamageLevel").ToString();
                         PlayerPrefs.SetInt("DamageLevel", PlayerPrefs.GetInt("DamageLevel") + 1);
 
-                        costDamage.text = Mathf.Pow(cost, PlayerPrefs.GetInt("DamageLevel")).ToString();
+                        costDamage.text = Mathf.Pow(powCostDamage, PlayerPrefs.GetInt("DamageLevel")).ToString();
                         damageLvl.text = "LVL " + PlayerPrefs.GetInt("DamageLevel").ToString();
                         coinBar.text = PlayerPrefs.GetInt("Coins").ToString();
+                        coinsPlayer = PlayerPrefs.GetInt("Coins");
                     }
                 };
 
@@ -101,15 +107,16 @@ public class ShopController : MonoBehaviour
             case "shop-btn-attackSpeed":
                 btn.clicked += () =>
                 {
-                    if (coinsPlayer >= (int)Mathf.Pow(cost, PlayerPrefs.GetInt("AttackSpeedLevel")))
+                    if (coinsPlayer >= (int)Mathf.Pow(powCostAttackSpeed, PlayerPrefs.GetInt("AttackSpeedLevel")))
                     {
-                        PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - (int)Mathf.Pow(cost, PlayerPrefs.GetInt("AttackSpeedLevel")));
+                        PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - (int)Mathf.Pow(powCostAttackSpeed, PlayerPrefs.GetInt("AttackSpeedLevel")));
                         attackSpeedLvl.text = "LVL " + PlayerPrefs.GetInt("AttackSpeedLevel").ToString();
                         PlayerPrefs.SetInt("AttackSpeedLevel", PlayerPrefs.GetInt("AttackSpeedLevel") + 1);
 
-                        costAttackSpeed.text = Mathf.Pow(cost, PlayerPrefs.GetInt("AttackSpeedLevel")).ToString();
+                        costAttackSpeed.text = Mathf.Pow(powCostAttackSpeed, PlayerPrefs.GetInt("AttackSpeedLevel")).ToString();
                         attackSpeedLvl.text = "LVL " + PlayerPrefs.GetInt("AttackSpeedLevel").ToString();
                         coinBar.text = PlayerPrefs.GetInt("Coins").ToString();
+                        coinsPlayer = PlayerPrefs.GetInt("Coins");
                     }
                 };
 

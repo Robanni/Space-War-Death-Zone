@@ -44,3 +44,7 @@
     width: 100%;
     opacity: 0;
 }
+
+.hide-btn {
+    display: none;
+}
