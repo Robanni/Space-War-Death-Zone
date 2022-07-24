@@ -64,7 +64,7 @@ public class Enemy_2 : BaseEnemy
                 rg.AddForce(firePoint[i].up * BulletPrefub.bulletForce, ForceMode2D.Impulse);
             }
 
-            yield return new WaitForSecondsRealtime(atackSpeed);
+            yield return new WaitForSeconds(atackSpeed);
         }
     }
 }

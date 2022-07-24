@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
 
             Instantiate(enemyPrefubArr[typeOfEnemy] , pos, enemyPrefubArr[typeOfEnemy].transform.rotation);
 
-            yield return new WaitForSecondsRealtime(intervalSpawn);
+            yield return new WaitForSeconds(intervalSpawn);
         }
     }
 }

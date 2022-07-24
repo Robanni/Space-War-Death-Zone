@@ -57,7 +57,7 @@ public class SimpleEnemy : BaseEnemy
 
             rg.AddForce(firePoint.up * bulletPrefab.bulletForce, ForceMode2D.Impulse);/* добавление импульса пуле*/
 
-            yield return new WaitForSecondsRealtime(AttackSpeed);// Скоррость срельбы
+            yield return new WaitForSeconds(AttackSpeed);// Скоррость срельбы
         }
     }
 

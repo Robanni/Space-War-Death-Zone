@@ -36,6 +36,6 @@ public class PlayerPref : MonoBehaviour
     {
         playerAllExp += playerCurrentExp;
         SaveGame();
-        SceneManager.LoadScene("Menu");
+        
     }
 }
