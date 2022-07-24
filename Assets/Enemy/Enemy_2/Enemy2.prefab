@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9637a07185f57640bf076d82fcaa086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 10
   expiriens: 5
   damage: 1
   BulletPrefub: {fileID: 5154008321722420979, guid: 925d92baea4c26247846fae8b80826bf, type: 3}

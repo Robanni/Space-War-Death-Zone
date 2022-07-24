@@ -24,7 +24,7 @@ public class Enemy_2 : BaseEnemy
 
         maxX = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x;
         maxY = cam.ScreenToWorldPoint(new Vector3(0, Screen.height, 0)).y;
-        Debug.Log(maxY);
+
 
         posX = transform.position.x;
         posY = transform.position.y;
