@@ -17,7 +17,7 @@ public class SimpleEnemy : BaseEnemy
     public BaseEnemyBullet bulletPrefab;
     public Transform firePoint;
     // Start is called before the first frame update
-    void Start()
+    void  Start()
     {
         Camera cam = Camera.main;
 
@@ -51,6 +51,8 @@ public class SimpleEnemy : BaseEnemy
     {
         while (true)
         {
+            //bulletPrefab.damage = damage;
+           
             GameObject bullet = Instantiate(bulletPrefab.gameObject, firePoint.position, bulletPrefab.transform.rotation);/*
             создание объекта пули*/
             Rigidbody2D rg = bullet.GetComponent<Rigidbody2D>();/*взятие физ клмпоненты*/

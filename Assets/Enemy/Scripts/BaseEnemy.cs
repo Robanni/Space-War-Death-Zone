@@ -5,12 +5,23 @@ using UnityEngine;
 public class BaseEnemy : MonoBehaviour
 {
     [SerializeField]
-    protected int health = 1;
+    public int health = 1;
     [SerializeField]
-    protected int expiriens = 1;
+    public int expiriens = 1;
     [SerializeField]
-    protected int damage = 1;
+    public int  damage = 1;
+    
+    public DistanceMetricsBar distance;
 
+    void Awake()
+    {
+        distance = FindObjectOfType<DistanceMetricsBar>();
+        if (distance.getDistance() >= 300)
+        {
+            health += Mathf.RoundToInt(distance.getDistance() / 300);
+            damage += Mathf.RoundToInt(distance.getDistance() / 300);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +35,8 @@ public class BaseEnemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+        
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
