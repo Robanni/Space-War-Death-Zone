@@ -8,6 +8,7 @@ public class ShopController : MonoBehaviour
     private Button btnShopHP;
     private Button btnShopDamage;
     private Button btnShopAttackSpeed;
+    private Button btnAdvertisement;
 
     private int powCostHp = 2;
     private int powCostDamage = 5;
@@ -35,6 +36,7 @@ public class ShopController : MonoBehaviour
         btnShopHP = root.Q<Button>("shop-btn-hp");
         btnShopDamage = root.Q<Button>("shop-btn-damage");
         btnShopAttackSpeed = root.Q<Button>("shop-btn-attackSpeed");
+        btnAdvertisement = root.Q<Button>("btn-advertisement");
 
         // Get lvl label from root
         hpLvl = root.Q<Label>("hp-number");
@@ -58,6 +60,15 @@ public class ShopController : MonoBehaviour
         costAttackSpeed.text = Mathf.Pow(powCostAttackSpeed, PlayerPrefs.GetInt("AttackSpeedLevel")).ToString();
 
         coinBar.text = PlayerPrefs.GetInt("Coins").ToString();
+
+        if (Application.internetReachability != NetworkReachability.NotReachable)
+        {
+            btnAdvertisement.clicked += () =>
+            {
+                
+            };
+        }
+        
 
         ShopButton(btnShopHP);
         ShopButton(btnShopDamage);

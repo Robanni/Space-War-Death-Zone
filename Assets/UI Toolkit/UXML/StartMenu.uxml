@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Styles/btnStyles.uss?fileID=7433441132597879392&amp;guid=51babe257444b1a47a65643cdf416d6e&amp;type=3#btnStyles" />
-    <ui:VisualElement name="MainWin" style="flex-grow: 1; background-color: rgb(255, 255, 255);">
+    <ui:VisualElement name="MainWin" class="hide" style="flex-grow: 1; background-color: rgb(255, 255, 255);">
         <ui:VisualElement name="container" style="padding-left: 50px; padding-right: 50px; padding-top: 20px; padding-bottom: 70px; flex-grow: 1; flex-direction: column; flex-wrap: nowrap; align-items: center; justify-content: center; top: auto; width: 100%;">
             <ui:VisualElement name="title-container" style="flex-direction: row; flex-grow: 0; flex-shrink: 0; width: 100%; -unity-font: none;">
                 <ui:Label text="Space War &#10;Death Zone" display-tooltip-when-elided="true" name="title-header" enable-rich-text="true" style="font-size: 36px; -unity-text-align: upper-center; margin-bottom: 20px; width: 100%; flex-shrink: 0; display: flex; overflow: visible; align-items: stretch; white-space: nowrap; color: rgb(7, 7, 7); flex-direction: column; flex-wrap: nowrap; height: 80px; justify-content: flex-start; -unity-font: none; -unity-font-style: normal;" />
@@ -21,10 +21,15 @@
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="ShopWin" class="hide" style="flex-grow: 1; margin-bottom: 0; background-color: rgb(255, 255, 255);">
+    <ui:VisualElement name="ShopWin" style="flex-grow: 1; margin-bottom: 0; background-color: rgb(255, 255, 255);">
         <ui:VisualElement name="container" style="padding-left: 15px; padding-right: 15px; padding-top: 40px; padding-bottom: 40px; flex-grow: 1; flex-direction: column; flex-wrap: nowrap; align-items: center; justify-content: center; top: auto; width: 100%;">
             <ui:VisualElement name="title-container" style="flex-direction: row; flex-grow: 0; flex-shrink: 1; justify-content: space-around; width: 100%; flex-wrap: nowrap; align-items: stretch; margin-bottom: 0;">
-                <ui:Label text="Shop" display-tooltip-when-elided="true" name="title-shop" enable-rich-text="true" style="font-size: 36px; -unity-text-align: upper-left; margin-bottom: 0; width: 78%; flex-shrink: 0; display: flex; overflow: visible; align-items: center; white-space: nowrap; color: rgb(0, 0, 0); flex-direction: column; flex-wrap: nowrap; height: 107px; justify-content: center;" />
+                <ui:Label text="Shop" display-tooltip-when-elided="true" name="title-shop" enable-rich-text="true" style="font-size: 36px; -unity-text-align: upper-left; margin-bottom: 0; width: 45%; flex-shrink: 0; display: flex; overflow: visible; align-items: center; white-space: nowrap; color: rgb(0, 0, 0); flex-direction: column; flex-wrap: nowrap; height: 107px; justify-content: center;" />
+                <ui:VisualElement name="Advetrisemet" style="justify-content: flex-start; align-items: stretch;">
+                    <ui:VisualElement name="title-advertisement" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Img/AD.png?fileID=2800000&amp;guid=de7c448004b91054394701477aac289b&amp;type=3#AD&apos;); justify-content: center; align-items: center; height: 52px; width: 64px; top: 12px;">
+                        <ui:Button display-tooltip-when-elided="true" name="btn-advertisement" style="width: 50px; height: 55px; opacity: 0;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
                 <ui:VisualElement name="nav-bar" style="width: 50px; height: 100%; min-width: 50px; max-width: 50px;">
                     <ui:Label display-tooltip-when-elided="true" name="coin-title" enable-rich-text="false" style="background-image: url(&apos;project://database/Assets/Player/Img/coin.png?fileID=2800000&amp;guid=638f86e4e9586e5498b3476cb7035664&amp;type=3#coin&apos;); width: 50px; height: 50px; -unity-text-align: lower-center; padding-top: 0; padding-bottom: 0; padding-right: 0; padding-left: 0;" />
                     <ui:Label text="0" display-tooltip-when-elided="true" name="coin-bar" style="font-size: 24px; -unity-text-align: upper-center; color: rgb(5, 5, 5); width: 100%; position: relative; bottom: auto; top: auto; padding-left: 0; padding-right: 0; justify-content: center; align-items: center; right: 0; padding-top: 0; flex-wrap: nowrap;" />

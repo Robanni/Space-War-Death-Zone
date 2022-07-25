@@ -10,7 +10,6 @@ public class MainPlayer : MonoBehaviour
     private void Start()
     {
         health = PlayerPrefs.GetInt("HealthLevel") + 1;
-        Debug.Log(PlayerPrefs.GetInt("Coins"));
     }
 
     private void Update()
