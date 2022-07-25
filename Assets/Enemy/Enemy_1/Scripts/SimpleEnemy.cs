@@ -17,8 +17,9 @@ public class SimpleEnemy : BaseEnemy
     public BaseEnemyBullet bulletPrefab;
     public Transform firePoint;
     // Start is called before the first frame update
-    void  Start()
+    new void  Start()
     {
+        base.Start();
         Camera cam = Camera.main;
 
         maxX = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x;

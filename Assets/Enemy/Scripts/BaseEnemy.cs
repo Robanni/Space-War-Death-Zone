@@ -13,13 +13,13 @@ public class BaseEnemy : MonoBehaviour
     
     public DistanceMetricsBar distance;
 
-    void Awake()
+    protected void Start()
     {
         distance = FindObjectOfType<DistanceMetricsBar>();
         if (distance.getDistance() >= 300)
         {
             health += Mathf.RoundToInt(distance.getDistance() / 300);
-            damage += Mathf.RoundToInt(distance.getDistance() / 300);
+            damage += Mathf.RoundToInt(distance.getDistance() / 500);
         }
     }
     // Update is called once per frame

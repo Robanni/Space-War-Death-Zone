@@ -18,8 +18,10 @@ public class Enemy_2 : BaseEnemy
     private float atackSpeed = 1;
 
     // Start is called before the first frame update
-    void Start()
+
+    new void Start()
     {
+        base.Start();
         Camera cam = Camera.main;
 
         maxX = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x;
