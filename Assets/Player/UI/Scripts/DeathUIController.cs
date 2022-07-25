@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 public class DeathUIController : MonoBehaviour
 {
     public GameObject deathPanel;
-    private MainPlayer player;
+    public MainPlayer player;
+    public MainPlayer playerRespawnPrefub;
     private void Start()
     {
         deathPanel.SetActive(false);
-        player = FindObjectOfType<MainPlayer>();
+        
         Time.timeScale = 1;
+
+
     }
 
     private void Update()
@@ -33,4 +36,21 @@ public class DeathUIController : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    private IEnumerator Respawn()
+    {
+
+        player =Instantiate(playerRespawnPrefub, new Vector3(0, 1.14f, 0), playerRespawnPrefub.transform.rotation);
+        
+
+        yield return new WaitForSecondsRealtime(5f);
+        Time.timeScale = 1;
+    }
+
+    public void GetRespawn()
+    {
+        StartCoroutine(Respawn());
+        deathPanel.SetActive(false);
+    }
+
 }

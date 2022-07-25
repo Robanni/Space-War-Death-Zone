@@ -7,11 +7,10 @@ public class MainPlayer : MonoBehaviour
     public int exp = 0;
     [HideInInspector]
     public int health = 0;
-
     private void Start()
     {
         health = PlayerPrefs.GetInt("HealthLevel") + 1;
-        
+        Debug.Log(PlayerPrefs.GetInt("Coins"));
     }
 
     private void Update()
@@ -32,6 +31,7 @@ public class MainPlayer : MonoBehaviour
 
     public bool isAlive()
     { return health > 0; }
+
     void takeDamege(int damage)//получение урона
     {
         health -= damage;

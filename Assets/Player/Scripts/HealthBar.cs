@@ -18,8 +18,11 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!player) return;
-
+        if(!player && Time.timeScale != 0)
+        {
+            player = FindObjectOfType<MainPlayer>();
+            textMeshPro.text = (player.health).ToString();
+        }
         if (player.health >= 0) textMeshPro.text = (player.health).ToString();
         else textMeshPro.text = "0";
     }
