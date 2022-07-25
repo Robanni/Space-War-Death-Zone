@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c0883aacaf6d74f84fbb5ba5c1b46a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intervalSpawn: 5
+  intervalSpawn: 2
   enemyPrefubArr:
   - {fileID: 7289229481557758752, guid: 1d561e614b74c634eae1f3e9f11bb211, type: 3}
   - {fileID: 7837768723938556973, guid: 4ee229245d0625f47a3e42204bd91f9b, type: 3}
