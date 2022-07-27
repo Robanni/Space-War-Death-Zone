@@ -45,13 +45,9 @@ public class EnemySpawner : MonoBehaviour
 
                 Instantiate(enemyPrefubArr[typeOfEnemy], pos, enemyPrefubArr[typeOfEnemy].transform.rotation);
 
-<<<<<<< HEAD
-            yield return new WaitForSeconds(intervalSpawn);
-=======
                 yield return new WaitForSeconds(intervalSpawn);
             }
             yield return new WaitForSeconds(2);
->>>>>>> 0c166af4772d47a641afc1a465e86202ce364e7f
         }
     }
 
