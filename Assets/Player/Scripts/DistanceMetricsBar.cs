@@ -13,8 +13,6 @@ public class DistanceMetricsBar : MonoBehaviour
     {
         distance += Time.deltaTime * 5;
         distanceMetricsBar.text = Mathf.Round(distance).ToString();
-        
-        
     }
 
     public float getDistance()

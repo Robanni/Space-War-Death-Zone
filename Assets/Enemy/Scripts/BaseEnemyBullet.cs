@@ -9,7 +9,7 @@ public class BaseEnemyBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        damage = FindObjectOfType<BaseEnemy>().damage;
     }
 
     // Update is called once per frame
