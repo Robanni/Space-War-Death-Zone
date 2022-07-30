@@ -24,6 +24,17 @@ public class MainPlayer : MonoBehaviour
         if(collision.gameObject.CompareTag( "EnemyBullet"))
         {
             int damage = collision.gameObject.GetComponent<BaseEnemyBullet>().damage;
+
+            takeDamege(damage);
+        }
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("BossBullet"))
+        {
+            int damage = collision.gameObject.GetComponent<BossBullet>().damage;
+
             takeDamege(damage);
         }
     }

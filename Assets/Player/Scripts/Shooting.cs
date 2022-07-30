@@ -14,6 +14,7 @@ public class Shooting : MonoBehaviour
     void Start()
     {
         shootingSpeed = 2f / (float)PlayerPrefs.GetInt("AttackSpeedLevel");
+        Debug.Log(PlayerPrefs.GetInt("AttackSpeedLevel"));
         StartCoroutine(shooting());
     }
 

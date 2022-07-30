@@ -2334,3 +2334,4 @@ MonoBehaviour:
   - {fileID: 7837768723938556973, guid: 4ee229245d0625f47a3e42204bd91f9b, type: 3}
   bossEnemyPrefubArr:
   - {fileID: 6241672362902428838, guid: 010889f778cd304488a11c5491c35073, type: 3}
+  - {fileID: 8875017266927758520, guid: b790a6d48f9889240acffdc7b5b270b0, type: 3}
