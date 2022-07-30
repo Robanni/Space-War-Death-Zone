@@ -7,7 +7,6 @@ public class MainPlayer : MonoBehaviour
     public int exp = 0;
     [HideInInspector]
     public int health = 0;
-
     private void Start()
     {
         health = PlayerPrefs.GetInt("HealthLevel") + 1;
@@ -25,12 +24,24 @@ public class MainPlayer : MonoBehaviour
         if(collision.gameObject.CompareTag( "EnemyBullet"))
         {
             int damage = collision.gameObject.GetComponent<BaseEnemyBullet>().damage;
+
+            takeDamege(damage);
+        }
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("BossBullet"))
+        {
+            int damage = collision.gameObject.GetComponent<BossBullet>().damage;
+
             takeDamege(damage);
         }
     }
 
     public bool isAlive()
     { return health > 0; }
+
     void takeDamege(int damage)//получение урона
     {
         health -= damage;

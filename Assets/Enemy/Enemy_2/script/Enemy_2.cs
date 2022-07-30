@@ -18,13 +18,15 @@ public class Enemy_2 : BaseEnemy
     private float atackSpeed = 1;
 
     // Start is called before the first frame update
-    void Start()
+
+    new void Start()
     {
+        base.Start();
         Camera cam = Camera.main;
 
         maxX = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x;
         maxY = cam.ScreenToWorldPoint(new Vector3(0, Screen.height, 0)).y;
-        Debug.Log(maxY);
+
 
         posX = transform.position.x;
         posY = transform.position.y;
@@ -64,7 +66,7 @@ public class Enemy_2 : BaseEnemy
                 rg.AddForce(firePoint[i].up * BulletPrefub.bulletForce, ForceMode2D.Impulse);
             }
 
-            yield return new WaitForSecondsRealtime(atackSpeed);
+            yield return new WaitForSeconds(atackSpeed);
         }
     }
 }

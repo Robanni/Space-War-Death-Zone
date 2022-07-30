@@ -33,7 +33,7 @@ public class BonusSpawner : MonoBehaviour
 
             Instantiate(BonusPrefub, pos, transform.rotation);
 
-            yield return new WaitForSecondsRealtime(intervalSpawn);
+            yield return new WaitForSeconds(intervalSpawn);
         }
     }
 }

@@ -18,7 +18,12 @@ public class CoinBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!player) return;
+        if (!player && Time.timeScale != 0)
+        {
+            player = FindObjectOfType<MainPlayer>();
+            coinText.text = player.exp.ToString();
+        }
+
         coinText.text = player.exp.ToString();
     }
 }

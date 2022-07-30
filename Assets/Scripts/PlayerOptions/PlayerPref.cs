@@ -31,11 +31,12 @@ public class PlayerPref : MonoBehaviour
         {
             playerCurrentExp = player.exp;
         }
+        if (!player && Time.timeScale != 0) { player = FindObjectOfType<MainPlayer>(); player.exp = playerCurrentExp; }
     }
     private void OnDestroy()
     {
         playerAllExp += playerCurrentExp;
         SaveGame();
-        SceneManager.LoadScene("Menu");
+        
     }
 }

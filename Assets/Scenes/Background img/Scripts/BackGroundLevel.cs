@@ -16,6 +16,7 @@ public class BackGroundLevel : MonoBehaviour
     {
         objectRect = GetComponent<RectTransform>();
         ScreenSettings = FindObjectOfType<MainCameraScript>().ScreenSettings;
+        gameObject.transform.localScale = new Vector3(ScreenSettings.y/6,gameObject.transform.localScale.y, 0);
     }
 
     // Update is called once per frame

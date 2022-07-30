@@ -17,8 +17,9 @@ public class SimpleEnemy : BaseEnemy
     public BaseEnemyBullet bulletPrefab;
     public Transform firePoint;
     // Start is called before the first frame update
-    void Start()
+    new void  Start()
     {
+        base.Start();
         Camera cam = Camera.main;
 
         maxX = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x;
@@ -51,13 +52,15 @@ public class SimpleEnemy : BaseEnemy
     {
         while (true)
         {
+            //bulletPrefab.damage = damage;
+           
             GameObject bullet = Instantiate(bulletPrefab.gameObject, firePoint.position, bulletPrefab.transform.rotation);/*
             создание объекта пули*/
             Rigidbody2D rg = bullet.GetComponent<Rigidbody2D>();/*взятие физ клмпоненты*/
 
             rg.AddForce(firePoint.up * bulletPrefab.bulletForce, ForceMode2D.Impulse);/* добавление импульса пуле*/
 
-            yield return new WaitForSecondsRealtime(AttackSpeed);// Скоррость срельбы
+            yield return new WaitForSeconds(AttackSpeed);// Скоррость срельбы
         }
     }
 
