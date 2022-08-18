@@ -6,7 +6,7 @@ public class BaseEnemy : MonoBehaviour
 {
     [SerializeField]
     public int health = 1;
-    [SerializeField]
+    [HideInInspector]
     public int expiriens = 1;
     [SerializeField]
     public int  damage = 1;
@@ -20,7 +20,9 @@ public class BaseEnemy : MonoBehaviour
         {
             health += Mathf.RoundToInt(distance.getDistance() / 300);
             damage += Mathf.RoundToInt(distance.getDistance() / 500);
+            expiriens += Mathf.RoundToInt(distance.getDistance() / 500);
         }
+        
     }
     // Update is called once per frame
     void Update()

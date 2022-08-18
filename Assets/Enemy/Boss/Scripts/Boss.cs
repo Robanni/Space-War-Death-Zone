@@ -22,7 +22,8 @@ public class Boss : BaseEnemy
         Camera cam = Camera.main;
         maxY = cam.ScreenToWorldPoint(new Vector3(0, Screen.height, 0)).y;
         maxX = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x -1f;
-        Debug.Log(maxX);
+        health *= 2;
+        expiriens *= 5;
         
         posY = transform.position.y;
         posX = transform.position.x;

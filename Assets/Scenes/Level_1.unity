@@ -1896,6 +1896,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1031185955063191529, guid: ecf5d536da6dbaa4898d43082c33adcf, type: 3}
+      propertyPath: m_Size.x
+      value: 5.45
+      objectReference: {fileID: 0}
     - target: {fileID: 1031185955063191532, guid: ecf5d536da6dbaa4898d43082c33adcf, type: 3}
       propertyPath: m_Name
       value: MainPlayerClone

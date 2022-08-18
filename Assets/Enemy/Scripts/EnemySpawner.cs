@@ -62,10 +62,14 @@ public class EnemySpawner : MonoBehaviour
             pos.z = 0;
             pos.x = 0;
 
-            boss = Instantiate(bossEnemyPrefubArr[0], pos, bossEnemyPrefubArr[0].transform.rotation);
+            if(curPlayerPos > 1500)
+            {
+                int bossNumber = Random.Range(0, bossEnemyPrefubArr.Count);
+                boss = Instantiate(bossEnemyPrefubArr[bossNumber], pos, bossEnemyPrefubArr[bossNumber].transform.rotation);
+            }else boss = Instantiate(bossEnemyPrefubArr[0], pos, bossEnemyPrefubArr[0].transform.rotation);
 
-            bossSpawnPosition[0] *= 3;//увеличение последующей точки спавна босса
-            bossSpawnPosition[1] *= 3;
+            bossSpawnPosition[0] += 500;//увеличение последующей точки спавна босса
+            bossSpawnPosition[1] += 500;
 
             return;
         }

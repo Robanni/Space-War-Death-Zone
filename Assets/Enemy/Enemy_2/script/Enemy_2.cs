@@ -23,7 +23,7 @@ public class Enemy_2 : BaseEnemy
     {
         base.Start();
         Camera cam = Camera.main;
-
+        expiriens *= 2;
         maxX = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x;
         maxY = cam.ScreenToWorldPoint(new Vector3(0, Screen.height, 0)).y;
 
