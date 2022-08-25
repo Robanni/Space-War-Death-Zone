@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceMetricsBar: {fileID: 82018235}
-  DictanseScaleFactor: 5
+  DictanseScaleFactor: 7
 --- !u!114 &82018235
 MonoBehaviour:
   m_ObjectHideFlags: 0
