@@ -7,11 +7,12 @@ public class DistanceMetricsBar : MonoBehaviour
 {
     public TextMeshProUGUI distanceMetricsBar;
     private float distance = 0;
+    public float DictanseScaleFactor = 5;
    
     // Update is called once per frame
     void FixedUpdate()
     {
-        distance += Time.deltaTime * 5;
+        distance += Time.deltaTime * DictanseScaleFactor;
         distanceMetricsBar.text = Mathf.Round(distance).ToString();
     }
 

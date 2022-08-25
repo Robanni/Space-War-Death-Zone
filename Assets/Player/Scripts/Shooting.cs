@@ -28,7 +28,7 @@ public class Shooting : MonoBehaviour
 
             rg.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);/* добавление импульса пуле*/
 
-            yield return new WaitForSecondsRealtime(shootingSpeed);// Скоррость срельбы
+            yield return new WaitForSeconds(shootingSpeed);// Скоррость срельбы
         }
     }
 }
