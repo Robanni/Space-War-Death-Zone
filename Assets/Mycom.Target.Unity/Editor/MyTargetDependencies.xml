@@ -1,0 +1,8 @@
+<dependencies>
+  <androidPackages>
+    <androidPackage spec="com.my.target:mytarget-sdk:5.15.3" />
+  </androidPackages>
+  <iosPods>
+    <iosPod name="myTargetSDK" version="5.15.2" bitcodeEnabled="true" minTargetSdk="9.0" />
+  </iosPods>
+</dependencies>

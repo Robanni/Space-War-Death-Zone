@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class BackGroundLevel : MonoBehaviour
 {
+    
     public List<GameObject> NextBackGround;
     private Vector3 CurrentPos;
     private Vector3 ScreenSettings;
     private float speed = 0.2f;
     private bool creatChild = false;
 
-    private RectTransform  objectRect;
+    private RectTransform objectRect;
     // Start is called before the first frame update
     void Start()
     {
         objectRect = GetComponent<RectTransform>();
         ScreenSettings = FindObjectOfType<MainCameraScript>().ScreenSettings;
-        gameObject.transform.localScale = new Vector3(ScreenSettings.y/6,gameObject.transform.localScale.y, 0);
+        gameObject.transform.localScale = new Vector3(ScreenSettings.y / 2, gameObject.transform.localScale.y, 0);
     }
-
     // Update is called once per frame
     void FixedUpdate()
     {

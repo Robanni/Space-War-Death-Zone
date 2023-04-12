@@ -22,10 +22,6 @@ public class PlayerMovement : MonoBehaviour
         cam = Camera.main;
     }
 
-    // Update is called once per frame
-    void Update()
-    {   
-    }
     void FixedUpdate()
     {
         currentPosition = transform.position;
@@ -38,6 +34,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 currentPosition = cam.ScreenToWorldPoint(touch.position);
             }
+        }
+
+        if (Input.mousePosition != null)
+        {
+
+            currentPosition = cam.ScreenToWorldPoint(Input.mousePosition);
+            
         }
         transform.position = currentPosition;
     }

@@ -16,6 +16,7 @@ public class MainPlayer : MonoBehaviour
     {
         if (!isAlive())
         {
+            FindObjectOfType<Yandex>().DeathAdv();
             Destroy(gameObject);
         }
     }
